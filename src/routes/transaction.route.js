@@ -8,5 +8,9 @@ const transactionRoutes = express.Router();
  * create a new transaction
  */
 transactionRoutes.post('/',authMiddleware.userRegisterMiddle,transactionController.createTransaction)
+/**
+ * Post /api/transaction/
+ * funds created
+ */
 transactionRoutes.post('/system/initialFunds',authMiddleware.authSystemUserMiddleware,transactionController.initialTransactionFunds)
 module.exports = transactionRoutes;

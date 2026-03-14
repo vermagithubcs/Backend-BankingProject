@@ -18,5 +18,8 @@ router.get(
   authMiddleware.authSystemUserMiddleware,
   accountController.getAccountController,
 );
+/**
+ * Get - user bank balance fetched
+ */
 router.get('/balance/:accountId',authMiddleware.authSystemUserMiddleware,accountController.getAccountBalanceController)
 module.exports = router;
